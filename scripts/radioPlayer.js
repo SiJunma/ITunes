@@ -68,17 +68,17 @@ export const radioPlayerInit = () => {
     radioVolume.addEventListener('input', () => {
         audio.volume = radioVolume.value / 100;
         toggleIconVolume();
-        });
-        audio.volume = 0.5;
-        radioVolume.value = audio.volume * 100;
+    });
+    audio.volume = 0.5;
+    radioVolume.value = audio.volume * 100;
     
-        radioVolumeIcon.addEventListener('click', () => {
-            const volume = audio.volume;
-    
-            if (volume) {
-                audio.volume = 0;
-                toggleIconVolume();
-                radioVolume.value = audio.volume * 100;
-            }
-        });
+    radioVolumeIcon.addEventListener('click', () => {
+        const volume = audio.volume;
+
+        if (volume) {
+            audio.volume = 0;
+            toggleIconVolume();
+            radioVolume.value = audio.volume * 100;
+        }
+    });
 }
