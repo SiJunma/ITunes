@@ -25,3 +25,7 @@ html{-webkit-box-sizing:border-box;box-sizing:border-box}*,*::before,*::after{-w
     margin-left: 50px;
     cursor: pointer;
 }
+
+.audio-container {
+    overflow: hidden;
+}
