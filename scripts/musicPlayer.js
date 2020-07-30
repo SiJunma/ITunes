@@ -62,7 +62,8 @@ export const musicPlayerInit = () => {
             } else {
                 audioPlayer.pause();
             }
-            loadTrack();
+            const track = playlist[trackIndex];
+            audioHeader.textContent = track.toLocaleUpperCase();
         } else if (target.classList.contains('audio-button__prev')) {
             prevTrack();
         } else if (target.classList.contains('audio-button__next')) {
