@@ -100,4 +100,8 @@ const videoPlayer = document.querySelector('.video-player'),
         }
     });
 
+    videoPlayerInit.stop = () => {
+        videoPlayer.pause();
+        toggleIcon();
+    }
 }

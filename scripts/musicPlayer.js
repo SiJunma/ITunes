@@ -38,6 +38,7 @@ export const musicPlayerInit = () => {
             trackIndex = playlist.length - 1;
         }
         loadTrack();
+        audioProgressTiming.style.width = '0%';
     };
 
     const nextTrack = () => {
@@ -47,6 +48,7 @@ export const musicPlayerInit = () => {
             trackIndex++;
         }
         loadTrack();
+        audioProgressTiming.style.width = '0%';
     };
 
     audioNavigation.addEventListener('click', evt => {
@@ -126,4 +128,13 @@ export const musicPlayerInit = () => {
             musicVolume.value = audioPlayer.volume * 100;
         }
     });
+
+    musicPlayerInit.stop = () => {
+        if (!audioPlayer.paused) {
+            audioPlayer.pause();
+            audio.classList.toggle('play');
+            audioButtonPlay.classList.toggle('fa-play');
+            audioButtonPlay.classList.toggle('fa-pause');
+        }
+    }
 }
